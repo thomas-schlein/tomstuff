@@ -21,7 +21,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html
       lang='en'
-      className={`${robotoSans.variable} min-h-screen antialiased bg-gradient-to-r from-background to-background2`}
+      className={`${robotoSans.variable} min-h-screen antialiased bg-gradient-to-r from-background to-background2 bg-fixed`}
     >
       <body className='min-h-screen flex flex-col justify-center items-center'>
         <main className='h-full flex flex-col pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]'>
