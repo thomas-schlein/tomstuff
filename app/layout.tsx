@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Geist, Geist_Mono, Roboto } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 import './globals.css';
 
 const robotoSans = Roboto({
@@ -15,16 +15,19 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
   viewportFit: 'cover', // This expands the body outside the safe area
 };
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html
       lang='en'
-      className={`${robotoSans.variable} pb-[env(safe-area-inset-bottom)] pt-[env(safe-area-inset-top)] h-full antialiased bg-gradient-to-r from-background to-background2`}
+      className={`${robotoSans.variable} min-h-screen antialiased bg-gradient-to-r from-background to-background2`}
     >
-      <body className='min-h-full flex flex-col'>{children}</body>
+      <body className='min-h-screen flex flex-col justify-center items-center'>
+        <main className='h-full flex flex-col pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]'>
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
