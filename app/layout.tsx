@@ -19,15 +19,11 @@ export const viewport: Viewport = {
 };
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
-    <html lang='en' className={`${robotoSans.variable} h-full`}>
-      <body className='min-h-full flex flex-col justify-center items-center relative isolation-auto'>
-        <div
-          className='
-          fixed inset-0 -z-10 h-full w-full 
-          bg-gradient-to-r from-background to-background2
-          pointer-events-none
-        '
-        />
+    <html
+      lang='en'
+      className={`${robotoSans.variable} h-full bg-gradient-to-r from-background to-background2 bg-fixed`}
+    >
+      <body className='h-full m-0 p-0 antialiased bg-transparent flex flex-col justify-center items-center'>
         <main className='h-full flex flex-col pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]'>
           {children}
         </main>
