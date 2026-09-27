@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme {
+  /* Map Tailwind utility classes to CSS variables */
+  --color-background: var(--bg);
+  --color-background2: var(--bg2);
+  --color-text: var(--text);
+  --color-primary: var(--primary);
+}
+
+@layer base {
+  /* Default Light Theme */
+  :root {
+    --bg: #ffffff;
+    --text: #000000;
+    --primary: #3b82f6;
+  }
+
+  /* Dark Theme */
+  [data-theme="ghost-shell"] {
+    --bg: #ffffff;;
+    --bg2: #ffffff;;
+    --text: #000000;
+    --primary: #cd3462;
+  }
+
+  [data-theme="avengers-endgame"] {
+    --bg: #9384BD;
+    --bg2: #D9D2EA;
+    --text: #000000;
+    --primary: #ffffff;
+  }
+}
+
+@theme inline {
+  --font-sans: var(--font-roboto-sans);
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.movieHeader, .movieBody, .movieSubheader {
+  color: var(--color-text)
+}
+
+.movieHeader {
+  font-size: 80px;
+  font-weight: 900;
+  line-height:80%;
+}
+
+.movieBody {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.movieSubheader {
+  font-size: 16px;
+  font-weight: 900;
+}
