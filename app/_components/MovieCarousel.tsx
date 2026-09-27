@@ -39,6 +39,13 @@ export default function MovieCarousel({
           <a
             key={`${movie.title}_${index}`}
             onClick={() => setMovie(movies?.[index])}
+            style={{
+              border: 'solid black 1px',
+              minHeight: 24,
+              minWidth: 24,
+              scale: 1,
+              textAlign: 'center',
+            }}
           >
             {index + 1}
           </a>

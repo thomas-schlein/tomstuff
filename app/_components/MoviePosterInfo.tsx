@@ -32,7 +32,7 @@ export default function MoviePosterInfo({ movie }: { movie: Movie }) {
           borderBottomLeftRadius: '25px',
           borderBottomRightRadius: '25px',
           marginTop: -30,
-          paddingLeft: 20,
+          paddingLeft: 10,
           paddingTop: 40,
           paddingBottom: 12,
         }}

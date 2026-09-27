@@ -12,6 +12,7 @@ export default function DesktopMovie({ movie }: { movie: Movie }) {
         justifyContent: 'center',
         alignContent: 'center',
         alignItems: 'center',
+        gap: 36,
       }}
     >
       <div
